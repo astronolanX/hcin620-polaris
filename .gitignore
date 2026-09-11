@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Local environment files (keep shareable templates)
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# macOS
+.DS_Store
+
+# Editor and IDE local files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
