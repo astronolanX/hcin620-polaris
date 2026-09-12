@@ -4,7 +4,17 @@ Team Polaris group project for HCIN-620.
 
 ## Overview
 
-This repository will hold the team's project work and supporting documentation. Project scope and application technology choices are to be determined.
+This repository will hold the team's project work and supporting documentation. Project scope is to be determined.
+
+## Website Platform and Hosting
+
+- Hosting: GitHub Pages, decided on the professor's recommendation.
+- Site implementation technology: Astro, generating a static website.
+- Repository visibility: public, selected for GitHub Pages hosting.
+- Component library: Bootstrap, with custom CSS to implement the team's Figma designs.
+- Publishing setup: pending; no site has been published as part of this task.
+
+The platform and hosting decisions are recorded. Teammate review remains pending.
 
 ## Team
 
