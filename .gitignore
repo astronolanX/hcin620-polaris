@@ -6,6 +6,10 @@ build/
 dist/
 .astro/
 
+# Sensitive reference originals (restore only when explicitly requested)
+docs/course/HCIN-620Syllabus.pdf
+docs/team/Group2-Contract.pdf
+
 # Local environment files (keep shareable templates)
 .env
 .env.*

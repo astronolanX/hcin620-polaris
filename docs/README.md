@@ -4,7 +4,7 @@ This folder contains reference documents and workflow guidance for Team Polaris.
 
 ## Course References
 
-- [HCIN-620 Syllabus](course/HCIN-620Syllabus.pdf): Original course syllabus.
+- HCIN-620 Syllabus: Omitted from the public repository because it includes instructor contact details and a meeting link. Refer to the course-provided original.
 - [Syllabus Calendar and Course Schedule](course/HCIN-620-Syllabus-Calendar.docx): Instructor-provided schedule; marked subject to change.
 - [Milestone 1](course/Milestone-1.pdf): Original assignment brief.
 
@@ -22,7 +22,7 @@ See [Tools and Usage](tools.md#ai-attribution) for assistance attribution and pe
 
 ## Team Agreements
 
-- [Group 2 Contract](team/Group2-Contract.pdf): Original team contract.
+- Group 2 Contract: Omitted from the public repository because it includes student emails and signatures. Refer to the team's original contract.
 
 ## Tools and Workflow
 
