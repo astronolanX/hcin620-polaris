@@ -9,7 +9,8 @@ Team Polaris's workflow tools and planned additions are listed below.
 | Jira | Task assignments, progress tracking, and deadlines. |
 | Google Docs and Google Drive | Collaborative documentation and shared project materials. |
 | GitHub | Version control, repository documentation, and work review. |
-| GitHub Pages (planned) | Hosting for the static website; publishing setup is pending. |
+| GitHub Pages | Hosting for the static website; GitHub Actions source configured and deployment workflow prepared. First deployment and live verification pending. |
+| GitHub Actions | Publishing workflow prepared: build with Node.js 24 and npm, upload `dist/`, and deploy to GitHub Pages when `main` changes. First run pending. |
 | Astro | Static website framework for the overview and Project Focus pages, shared layout, and local development/build commands. |
 | Bootstrap | Active: CSS bundled locally through the shared layout; custom stylesheet ready for the team's Figma designs. JavaScript components are not loaded yet. |
 | Node.js and npm | Active: run Astro locally and install the dependencies recorded in the npm lockfile. Use Node.js 24.x. |

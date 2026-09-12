@@ -19,7 +19,8 @@ This repository will hold the team's project work and supporting documentation. 
 - Site implementation technology: Astro, generating a static website.
 - Repository visibility: public, selected for GitHub Pages hosting.
 - Component library: Bootstrap, with custom CSS to implement the team's Figma designs.
-- Publishing setup: pending; no site has been published as part of this task.
+- Publishing setup: deployment workflow prepared; first deployment and live verification are pending.
+- Site URL after publishing: https://astronolanx.github.io/hcin620-polaris/ (no custom domain needed).
 
 The platform and hosting decisions are recorded. Teammate review remains pending.
 
@@ -61,7 +62,7 @@ npm run build
 npm run preview
 ```
 
-The build writes the static site to `dist/`. Preview serves that build locally at the same base path. GitHub Pages publishing is still pending.
+The build writes the static site to `dist/`. Preview serves that build locally at the same base path.
 
 The overview and Project Focus pages use a temporary responsive layout and placeholder text while the team prepares Figma designs and final content. These placeholders are not submission-ready content.
 
@@ -76,6 +77,20 @@ See the [Astro setup guide](https://docs.astro.build/en/install-and-setup/) and 
 Before using AI tools, read the [AI Workflow Guidelines](docs/ai-guidelines.md) and [Tools and Usage](docs/tools.md). Repository instructions are in `AGENTS.md` and `CLAUDE.md`.
 
 See [Agent Skills](docs/agent-skills.md) for proofreading, local-link checks, and change review. Agents can load a skill for relevant work or when explicitly asked, and delegate an independent check when useful. The guide covers invocation, permissions, and the shared structure.
+
+## Publishing
+
+The [deployment workflow](.github/workflows/deploy.yml) builds the site with Node.js 24 and publishes only `dist/` on pushes to `main`. A maintainer with write access can also run it manually from the Actions tab on `main`. It uses GitHub-provided deployment credentials; no personal token or custom domain is required.
+
+The repository owner or an administrator handles the one-time GitHub Pages setup, selecting **GitHub Actions** as the publishing source. Team members do not need access to repository settings to contribute site updates.
+
+To publish updates:
+
+1. Prepare and review changes using the development workflow below. Changes reaching `main` trigger deployment automatically.
+2. Check [Actions](https://github.com/astronolanX/hcin620-polaris/actions) for a successful **Deploy to GitHub Pages** run.
+3. Check the [homepage](https://astronolanx.github.io/hcin620-polaris/) and [Project Focus](https://astronolanx.github.io/hcin620-polaris/project-focus/), including navigation and styling. Publishing placeholders does not make them submission-ready.
+
+See [Astro's publishing guide](https://docs.astro.build/en/guides/deploy/github/) for the GitHub Pages setup.
 
 ## Development Workflow
 
