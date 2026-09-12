@@ -2,6 +2,13 @@
 
 Team Polaris group project for HCIN-620.
 
+## Course
+
+- School: Rochester Institute of Technology (RIT).
+- Program: [Human-Computer Interaction MS](https://www.rit.edu/study/human-computer-interaction-ms).
+- Class: HCIN-620 — Information and Interaction Design.
+- Professor: Adam Emfield.
+
 ## Overview
 
 This repository will hold the team's project work and supporting documentation. Project scope is to be determined.
