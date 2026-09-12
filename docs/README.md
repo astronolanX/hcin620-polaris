@@ -18,7 +18,7 @@ Examples from the professor's list. Availability checked September 12, 2026; the
 - [Autonomous Ridesharing](https://www.phyllosophy.me/autonomous-ridesharing): Shows a domain not connected to a Wix site.
 - [Gaiety / HCIN 620 Project Website](https://g3.framer.website/): Accessible.
 
-See [Tools and Usage](tools.md#ai-attribution) for assistance attribution and pending team review.
+See [Tools and Usage](tools.md#ai-attribution) for AI assistance attribution.
 
 ## Team Agreements
 

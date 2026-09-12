@@ -48,7 +48,7 @@ docs/             Project documentation and handoff materials
 
 ## Getting Started
 
-Use Node.js 24.x and npm. If you use nvm, run `nvm use` from the repository root.
+Use Node.js 24.x and npm. Run the commands below from the root of your local copy of this repository. If you use nvm, run `nvm use` first.
 
 ```sh
 npm ci

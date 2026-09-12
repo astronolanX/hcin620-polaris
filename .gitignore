@@ -6,7 +6,7 @@ build/
 dist/
 .astro/
 
-# Sensitive reference originals (restore only when explicitly requested)
+# Sensitive reference originals (keep in restricted team storage)
 docs/course/HCIN-620Syllabus.pdf
 docs/team/Group2-Contract.pdf
 
