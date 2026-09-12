@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionIcon from '../components/SectionIcon.astro';
 ---
 
 <BaseLayout title="Overview | Team Polaris" page="overview">
@@ -11,10 +12,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a class="page-link" href={`${import.meta.env.BASE_URL}project-focus/`}>More about the project <span aria-hidden="true">↗</span></a>
     </section>
     <div class="overview-grid">
-      <section class="content-panel" aria-labelledby="problem"><p class="eyebrow">01 / The problem</p><h2 id="problem">What's the issue?</h2><p>A short explanation of the problem and why it matters will go here.</p></section>
-      <section class="content-panel" aria-labelledby="people"><p class="eyebrow">02 / The people</p><h2 id="people">Who is this for?</h2><p>Here's where we'll introduce the people who might use this and others involved.</p></section>
-      <section class="content-panel" aria-labelledby="direction"><p class="eyebrow">03 / The idea</p><h2 id="direction">What could help?</h2><p>We'll give a quick overview of the direction we're exploring. More details to come.</p></section>
+      <section class="content-panel" aria-labelledby="problem"><p class="eyebrow section-label"><SectionIcon name="problem" />01 / The problem</p><h2 id="problem">What's the issue?</h2><p>A short explanation of the problem and why it matters will go here.</p></section>
+      <section class="content-panel" aria-labelledby="people"><p class="eyebrow section-label"><SectionIcon name="users" />02 / The people</p><h2 id="people">Who is this for?</h2><p>Here's where we'll introduce the people who might use this and others involved.</p></section>
+      <section class="content-panel" aria-labelledby="direction"><p class="eyebrow section-label"><SectionIcon name="solution" />03 / The idea</p><h2 id="direction">What could help?</h2><p>We'll give a quick overview of the direction we're exploring. More details to come.</p></section>
     </div>
-    <section class="team-section" aria-labelledby="team"><div><p class="eyebrow">The team</p><h2 id="team">Team Polaris</h2></div><ul class="team-list"><li>Chris Dougall</li><li>Nolan Figueroa</li><li>Natasya Queentina</li><li>Shreya Rana</li></ul></section>
+    <section class="team-section" aria-labelledby="team"><div><p class="eyebrow section-label"><SectionIcon name="users" />The team</p><h2 id="team">Team Polaris</h2></div><ul class="team-list"><li>Chris Dougall</li><li>Nolan Figueroa</li><li>Natasya Queentina</li><li>Shreya Rana</li></ul></section>
   </main>
 </BaseLayout>

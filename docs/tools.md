@@ -25,3 +25,5 @@ Students make creative, design, and technology decisions and review AI-assisted 
 ## AI Attribution
 
 Built with OpenAI Codex as a pair programmer for site setup, implementation, documentation, and technical checks. Nolan Figueroa directs the website architecture and implementation; the team owns the project content and design decisions. The tools above support development and collaboration.
+
+Section icons are local inline SVG components implemented with OpenAI Codex in the student-selected minimal line style. They use no external icon package or image service.
