@@ -67,7 +67,9 @@ The starter page uses the existing team name and course description. It is a set
 
 Add pages under `src/pages/` and reuse `src/layouts/BaseLayout.astro`. Bootstrap CSS is bundled locally; add team-approved custom styles in `src/styles/global.css`. Import Bootstrap JavaScript only when a component needs it.
 
-The GitHub Pages path is configured in `astro.config.mjs`. Prefix internal links and paths to `public/` assets with `import.meta.env.BASE_URL`, for example `${import.meta.env.BASE_URL}images/example.png`. Keep private documents outside `public/`; its files are copied into the site.
+The GitHub Pages path is configured in `astro.config.mjs`. Prefix internal links and paths to `public/` assets with `import.meta.env.BASE_URL`, for example `${import.meta.env.BASE_URL}images/example.png`.
+
+Keep private documents out of this public repository, not just out of `public/`. Files in `public/` are copied into the site; other tracked files are still accessible on GitHub. Store sensitive originals in restricted team storage and share only reviewed, sanitized copies here. Removing a file in a later commit does not erase its earlier versions from [Git history](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
 
 See the [Astro setup guide](https://docs.astro.build/en/install-and-setup/) and [GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/) for framework instructions.
 
