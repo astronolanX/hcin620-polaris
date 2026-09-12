@@ -37,15 +37,39 @@ Responsibility for project work is shared across Team Polaris. Work is coordinat
 ## Project Structure
 
 ```text
-src/              Future application source
-public/           Future static assets
+src/pages/        Website pages (file paths become routes)
+src/layouts/      Shared HTML layout and stylesheet imports
+src/styles/       Custom CSS for team-approved designs
+public/           Public assets copied into the built site
 docs/             Project documentation and handoff materials
 .agents/skills/    Reusable assistant skills loaded for relevant tasks
 ```
 
 ## Getting Started
 
-Clone the repository and review the documentation in `docs/`. No framework, dependencies, or application setup is included yet.
+Use Node.js 24.x and npm. If you use nvm, run `nvm use` from the repository root.
+
+```sh
+npm ci
+npm run dev
+```
+
+Open `http://localhost:4321/hcin620-polaris/` (or the address printed in the terminal if that port is busy).
+
+```sh
+npm run build
+npm run preview
+```
+
+The build writes the static site to `dist/`. Preview serves that build locally at the same base path. GitHub Pages publishing is still pending.
+
+The starter page uses the existing team name and course description. It is a setup placeholder; the team will supply the homepage design and project content.
+
+Add pages under `src/pages/` and reuse `src/layouts/BaseLayout.astro`. Bootstrap CSS is bundled locally; add team-approved custom styles in `src/styles/global.css`. Import Bootstrap JavaScript only when a component needs it.
+
+The GitHub Pages path is configured in `astro.config.mjs`. Prefix internal links and paths to `public/` assets with `import.meta.env.BASE_URL`, for example `${import.meta.env.BASE_URL}images/example.png`. Keep private documents outside `public/`; its files are copied into the site.
+
+See the [Astro setup guide](https://docs.astro.build/en/install-and-setup/) and [GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/) for framework instructions.
 
 Before using AI tools, read the [AI Workflow Guidelines](docs/ai-guidelines.md) and [Tools and Usage](docs/tools.md). Repository instructions are in `AGENTS.md` and `CLAUDE.md`.
 
