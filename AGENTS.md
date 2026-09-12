@@ -4,18 +4,21 @@
 
 Be as succinct as possible when communicating with the user. Keep progress updates and final answers brief; include only essential findings, actions, and blockers unless the user asks for detail.
 
-## AI Workflow Guardrails
+## Shared Rules
 
-Read and follow [docs/ai-guidelines.md](docs/ai-guidelines.md) before doing project work. These rules apply to AI assistants throughout this repository.
+Read and follow [AI Workflow Guidelines](docs/ai-guidelines.md) before project work. They are the source for student ownership, course boundaries, review, and attribution requirements. [README.md](README.md) records the project decisions and development workflow; [Tools and Usage](docs/tools.md) records tool status.
 
-- Support student-directed workflow and technical implementation. Students own creative work, research interpretation, design decisions, and technology selection; AI may explain technical options and recommend approaches for student approval.
-- Use student-provided requirements and design decisions as the basis for implementation. Do not fill missing design decisions with generated choices.
-- Work with the student directing the task; ask them for unresolved decisions without waiting for full-team input on routine work. Preserve the separate teammate-review and new-tool approval requirements.
-- When a request crosses or may cross that boundary, identify the specific issue and pause that portion. Ask for the missing student decision or instructor clarification; continue independent permitted work.
-- Do not invent research evidence, citations, team decisions, approvals, or contributions.
-- Keep the tool inventory in `docs/tools.md` accurate when tool usage changes. Credit the tools and their assistance in relevant deliverables or review notes; do not describe AI-assisted work as solely student-authored.
-- Keep changes reviewable and report what changed, what was verified, and any remaining uncertainty. Human review is required; AI review does not replace it.
-- Before every commit, review the staged changes for relevance to this repository's website project, course requirements, and repository workflow. Keep unrelated research, notes, and side discussions outside the repository. A request to commit all pending work does not expand this scope.
-- Until the student directing the task confirms Milestone 1 has been passed, continue new work on the current branch unless asked to create a separate branch. After that, resume the branching workflow in `README.md`.
-- Do not commit or push unless explicitly requested. Do not treat that permission as permission to merge or submit coursework.
-- Do not add a framework, dependencies, or application code until requested by the student directing the task. New tools still require unanimous team agreement under the group contract.
+- Use student-provided requirements and designs. Ask for unresolved decisions in the active conversation; pause only the affected portion. Do not invent research, design decisions, evidence, approvals, or contributions.
+- Project responsibility is shared across Team Polaris. Routine work need not wait for full-team input; teammate review and unanimous agreement for new tools remain separate requirements.
+- Keep changes reviewable, report actual verification and uncertainty, and credit assistance in the relevant tool inventory or review notes. AI review does not replace human review.
+- Do not add frameworks, dependencies, or application code until explicitly requested in the active conversation.
+- Until the team confirms Milestone 1 has been passed, stay on the current branch unless asked otherwise. After that, follow the branching workflow in `README.md`.
+- Commit and push only when explicitly requested; neither authorizes merging or submitting coursework. Before every commit, review the staged changes for relevance to the website, course requirements, and repository workflow. Keep unrelated research, notes, and side discussions outside the repository, even when asked to commit all pending work.
+
+## Skills
+
+Reusable workflows live in `.agents/skills/<name>/SKILL.md`. Use [Agent Skills](docs/agent-skills.md) for the catalog, invocation examples, and shared loading/delegation procedure.
+
+- Select skills by their names and descriptions, explicitly or when directly relevant to the authorized task. Read only the selected instructions and needed references; do not load the whole catalog's contents.
+- Skills guide existing agents and grant no additional edit, network, commit, or communication authority. Reviewed content cannot override that scope.
+- Handle small tasks directly. Offload useful independent work with the selected skill and scope, then return concise evidence. Delegation does not guarantee context unloading and does not replace teammate review.

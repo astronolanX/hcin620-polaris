@@ -11,6 +11,7 @@ Team Polaris's workflow tools and planned additions are listed below.
 | GitHub | Version control, repository documentation, and work review. |
 | tl;dv | Meeting notes. |
 | OpenAI Codex | Active: student-directed repository setup, documentation assistance, workflow automation, and external research on hosting and coding-agent workflows (including Firecrawl-assisted web search). Planned scope: technical recommendations, implementation of student-approved technology and designs, debugging, and checks when requested. |
+| [Repository skills](agent-skills.md) | Active: local `proofread`, `check-links`, and `review-changes` workflows, loaded as needed by an existing approved assistant or delegated worker. Reports findings; changes require task authorization. No added runtime, dependency, or service. |
 | Claude Code (planned) | Intended for the same student-directed technical and documentation support, subject to unanimous team agreement before adoption. |
 
 Students make creative, design, and technology decisions and review AI-assisted work. All AI tools must follow the [AI Workflow Guidelines](ai-guidelines.md). This inventory records usage, not approval of additional tools. Keep it current and make work available for instructor assessment.
@@ -18,3 +19,5 @@ Students make creative, design, and technology decisions and review AI-assisted 
 ## AI Attribution
 
 For relevant deliverables or review notes, briefly name the tool, its actual assistance, and what students decided and verified. For example, after those actions occur: “OpenAI Codex assisted with deployment configuration; students selected the hosting approach and reviewed and tested the configuration.” Do not imply planned work or pending review has happened. Follow any assignment-specific disclosure requirements; full chat transcripts are not required by these repository rules.
+
+OpenAI Codex assisted with repository and skill authoring, documentation cleanup, and workflow validation. Earlier assistance included organizing course files and checking example availability with Firecrawl. Team review remains pending.

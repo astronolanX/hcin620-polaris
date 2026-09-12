@@ -10,7 +10,7 @@ This folder contains reference documents and workflow guidance for Team Polaris.
 
 ### Instructor-Listed Website Examples
 
-Examples supplied by the student from the professor's list. Availability checked September 12, 2026; these examples do not replace the assignment requirements.
+Examples from the professor's list. Availability checked September 12, 2026; these examples do not replace the assignment requirements.
 
 - [Feather](https://www.chenkatherine.com/feather): Accessible.
 - [Eco Scouts](https://www.mirako.me/eco-scouts): Shows an expired Squarespace site.
@@ -18,7 +18,7 @@ Examples supplied by the student from the professor's list. Availability checked
 - [Autonomous Ridesharing](https://www.phyllosophy.me/autonomous-ridesharing): Shows a domain not connected to a Wix site.
 - [Gaiety / HCIN 620 Project Website](https://g3.framer.website/): Accessible.
 
-OpenAI Codex assisted with copying and comparing course files, updating filenames and links, and checking example availability using Firecrawl. Student and teammate review remains pending.
+See [Tools and Usage](tools.md#ai-attribution) for assistance attribution and pending team review.
 
 ## Team Agreements
 
@@ -28,3 +28,4 @@ OpenAI Codex assisted with copying and comparing course files, updating filename
 
 - [Tools and Usage](tools.md): Project tools, their roles, and boundaries for AI assistance.
 - [AI Workflow Guidelines](ai-guidelines.md): Permitted assistance, student responsibilities, and review and disclosure expectations.
+- [Agent Skills](agent-skills.md): Skill catalog, architecture, on-demand loading, delegation, and examples.
