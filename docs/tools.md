@@ -10,7 +10,11 @@ Team Polaris's workflow tools and planned additions are listed below.
 | Google Docs and Google Drive | Collaborative documentation and shared project materials. |
 | GitHub | Version control, repository documentation, and work review. |
 | tl;dv | Meeting notes. |
-| OpenAI Codex | Student-directed repository setup, documentation assistance, and workflow automation in the project repository. |
-| Claude Code (planned) | Intended for student-directed repository maintenance, documentation assistance, and workflow automation, subject to unanimous team agreement before adoption. |
+| OpenAI Codex | Active: student-directed repository setup, documentation assistance, workflow automation, and external research on hosting and coding-agent workflows (including Firecrawl-assisted web search). Planned scope: technical recommendations, implementation of student-approved technology and designs, debugging, and checks when requested. |
+| Claude Code (planned) | Intended for the same student-directed technical and documentation support, subject to unanimous team agreement before adoption. |
 
-Students are responsible for creative work and design decisions and review AI-assisted work. All AI tools must follow the [AI Workflow Guidelines](ai-guidelines.md). The team will keep this list current, make its work available for instructor assessment, and discuss ambiguous AI uses with the instructor before proceeding.
+Students make creative, design, and technology decisions and review AI-assisted work. All AI tools must follow the [AI Workflow Guidelines](ai-guidelines.md). This inventory records usage, not approval of additional tools. Keep it current and make work available for instructor assessment.
+
+## AI Attribution
+
+For relevant deliverables or review notes, briefly name the tool, its actual assistance, and what students decided and verified. For example, after those actions occur: “OpenAI Codex assisted with deployment configuration; students selected the hosting approach and reviewed and tested the configuration.” Do not imply planned work or pending review has happened. Follow any assignment-specific disclosure requirements; full chat transcripts are not required by these repository rules.
