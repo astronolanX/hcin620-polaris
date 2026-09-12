@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  { id: 'problem', title: "What's the problem?", description: "We'll explain the issue, why we picked it, and what we've found that helps show why it matters." },
+  { id: 'solution', title: 'What could help?', description: "This is where we'll describe the general idea and how it could help. The details will come later." },
+  { id: 'users', title: 'Who might use it?', description: "We'll introduce potential users, what they need, and how we plan to hear from them." },
+  { id: 'stakeholders', title: 'Who else is involved?', description: "We'll cover other people and groups connected to the project, what matters to them, and how we'll keep them involved." },
+  { id: 'references', title: 'References', description: "The sources we use will go here, with links back to them from the text above." },
+];
+---
+
+<BaseLayout title="Project Focus | Team Polaris" page="focus">
+  <main id="main" class="site-shell" tabindex="-1">
+    <header class="page-intro">
+      <p class="eyebrow">Milestone 1 / A closer look</p>
+      <h1>Project Focus</h1>
+      <p class="intro-copy">A little more about the problem, the people, and the idea. These sections are holding spots for the team's content.</p>
+    </header>
+    <div class="focus-grid">
+      <nav class="section-nav" aria-label="On this page"><p class="eyebrow">On this page</p>{sections.map(section => <a href={`#${section.id}`}>{section.title}</a>)}</nav>
+      <div class="focus-content">
+        {sections.map((section, index) => <section id={section.id} aria-labelledby={`${section.id}-title`}>
+          <p class="eyebrow">0{index + 1}</p>
+          <h2 id={`${section.id}-title`}>{section.title}</h2>
+          <p>{section.description}</p>
+        </section>)}
+      </div>
+    </div>
+  </main>
+</BaseLayout>

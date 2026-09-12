@@ -63,7 +63,7 @@ npm run preview
 
 The build writes the static site to `dist/`. Preview serves that build locally at the same base path. GitHub Pages publishing is still pending.
 
-The starter page uses the existing team name and course description. It is a setup placeholder; the team will supply the homepage design and project content.
+The overview and Project Focus pages use a temporary responsive layout and placeholder text while the team prepares Figma designs and final content. These placeholders are not submission-ready content.
 
 Add pages under `src/pages/` and reuse `src/layouts/BaseLayout.astro`. Bootstrap CSS is bundled locally; add team-approved custom styles in `src/styles/global.css`. Import Bootstrap JavaScript only when a component needs it.
 
