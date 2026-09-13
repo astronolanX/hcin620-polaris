@@ -1,0 +1,12 @@
+---
+import ContentSection from './ContentSection.astro';
+import { projectSections } from '../data/project';
+---
+
+{projectSections.map(section => (
+  <ContentSection id={section.id} title={section.title}>
+    {section.paragraphs.map(paragraph => (
+      <p>{paragraph.map(segment => segment.emphasis ? <strong>{segment.text}</strong> : segment.text)}</p>
+    ))}
+  </ContentSection>
+))}

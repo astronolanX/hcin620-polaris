@@ -1,0 +1,21 @@
+---
+import { team } from '../data/team';
+
+interface Props {
+  stacked?: boolean;
+}
+
+const { stacked = false } = Astro.props;
+---
+
+<div class:list={['team', { 'team--stacked': stacked }]}>
+  <p class="team-label">Our team members include</p>
+  <ul class="team-list">
+    {team.map(member => (
+      <li>
+        <p class="team-name"><strong>{member.firstName}</strong> {member.lastName}</p>
+        <p class="team-roles">{member.roles}</p>
+      </li>
+    ))}
+  </ul>
+</div>
