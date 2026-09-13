@@ -1,12 +1,13 @@
 ---
 interface Props {
   label?: string;
+  plain?: boolean;
 }
 
-const { label = 'E-waste photo' } = Astro.props;
+const { label = 'E-waste photo', plain = false } = Astro.props;
 ---
 
-<figure class="feature-image">
+<figure class:list={['feature-image', { 'feature-image--plain': plain }]}>
   <div class="image-frame">
     <div class="image-placeholder">
       <svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -19,3 +20,16 @@ const { label = 'E-waste photo' } = Astro.props;
   </div>
   <figcaption>Image placeholder</figcaption>
 </figure>
+
+<style>
+  .feature-image--plain .image-frame {
+    padding: 0;
+    background: none;
+  }
+
+  .feature-image--plain .image-placeholder {
+    width: 100%;
+    aspect-ratio: 64 / 35;
+    background: #ebe9e2;
+  }
+</style>

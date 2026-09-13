@@ -1,0 +1,187 @@
+---
+const steps = [
+  {
+    title: 'Gathers the scattered information into one place',
+    kind: 'sources',
+    details: [
+      'Local government website',
+      'Store recycling/trade-in programs',
+      'Approved recycling centres',
+      'Manufacturer mail-in policies',
+    ],
+  },
+  {
+    title: 'User describes their item',
+    kind: 'item',
+    details: ['Item type', 'Condition', 'Location'],
+  },
+  {
+    title: 'One answer, for that item, in that place',
+    kind: 'answer',
+    details: ['Which disposal rules apply', 'Approved drop-off options nearby'],
+  },
+];
+---
+
+<div class="solution-steps">
+  <p class="solution-steps-label">How it works generally</p>
+  <ol class="solution-steps-list" role="list">
+    {steps.map((step, index) => (
+      <li class:list={['solution-step', `solution-step--${step.kind}`]}>
+        <p class="solution-step-number">Step {index + 1}</p>
+        <h3>{step.title}</h3>
+        <ul class="solution-step-details" role="list">
+          {step.details.map((detail) => <li>{detail}</li>)}
+        </ul>
+        {index < steps.length - 1 && (
+          <svg class="solution-step-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 12h15m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        )}
+      </li>
+    ))}
+  </ol>
+</div>
+
+<style>
+  .solution-steps {
+    --step-gap: clamp(3rem, 8.9vw, 8rem);
+    --step-line: #4d4d4d;
+    color: #fff;
+  }
+
+  .solution-steps-label,
+  .solution-step-number {
+    color: #b3b3b3;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .solution-steps-label {
+    margin: 0 0 1.25rem;
+  }
+
+  .solution-steps-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(0, 1fr));
+    gap: var(--step-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .solution-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 30rem;
+    padding: clamp(1.5rem, 2.78vw, 2.5rem);
+    border: 1px solid var(--step-line);
+    border-radius: 2.75rem;
+    box-sizing: border-box;
+  }
+
+  .solution-step-number {
+    margin: 0 0 .65rem;
+  }
+
+  .solution-step h3 {
+    margin: 0 0 3rem;
+    font-size: clamp(1.375rem, 1.81vw, 1.625rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -.015em;
+  }
+
+  .solution-step-details {
+    margin: auto 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .solution-step-details li {
+    overflow-wrap: anywhere;
+  }
+
+  .solution-step--sources .solution-step-details li {
+    padding-block: 1rem;
+    border-top: 1px solid var(--step-line);
+  }
+
+  .solution-step--sources .solution-step-details li:last-child {
+    border-bottom: 1px solid var(--step-line);
+  }
+
+  .solution-step--item .solution-step-details,
+  .solution-step--answer .solution-step-details {
+    display: grid;
+    gap: .75rem;
+  }
+
+  .solution-step--item .solution-step-details li,
+  .solution-step--answer .solution-step-details li {
+    display: flex;
+    align-items: center;
+    min-height: 4.25rem;
+    padding: 1rem .875rem;
+    border: 1px solid var(--step-line);
+    border-radius: 1rem;
+    box-sizing: border-box;
+  }
+
+  .solution-step--answer {
+    border-color: #faf9f7;
+    background: #faf9f7;
+    color: var(--ink);
+  }
+
+  .solution-step--answer .solution-step-number {
+    color: #585858;
+  }
+
+  .solution-step--answer .solution-step-details li {
+    min-height: 5.75rem;
+    border-color: var(--footer);
+    background: var(--footer);
+    color: #fff;
+  }
+
+  .solution-step-arrow {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + var(--step-gap) / 2);
+    width: 1.75rem;
+    height: 1.75rem;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: 800px) {
+    .solution-steps {
+      --step-gap: 4.5rem;
+    }
+
+    .solution-steps-list {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .solution-step {
+      min-height: 25rem;
+      padding: clamp(1.5rem, 6vw, 2.5rem);
+      border-radius: 2rem;
+    }
+
+    .solution-step h3 {
+      font-size: 1.625rem;
+    }
+
+    .solution-step-arrow {
+      top: calc(100% + var(--step-gap) / 2);
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+</style>

@@ -1,0 +1,114 @@
+---
+interface Props {
+  label: string;
+  tone?: 'light' | 'dark' | 'outline';
+}
+
+const { label, tone = 'light' } = Astro.props;
+---
+
+<li class:list={['metric-card', `metric-card--${tone}`]}>
+  <p class="metric-value"><span class="visually-hidden">{label}</span><span aria-hidden="true"><slot name="value" /></span></p>
+  <div class="metric-description"><slot /></div>
+  {Astro.slots.has('source') && <p class="metric-source"><slot name="source" /></p>}
+</li>
+
+<style>
+  .metric-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+    min-height: 28rem;
+    padding: clamp(7rem, 14vw, 12.5rem) clamp(1.5rem, 2.78vw, 2.5rem) clamp(1.5rem, 2.78vw, 2.5rem);
+    border-radius: 3rem;
+    background: var(--surface);
+    color: var(--ink);
+  }
+
+  .metric-card--dark {
+    background: var(--footer);
+    color: #fff;
+  }
+
+  .metric-card--outline {
+    justify-content: flex-start;
+    min-height: 25rem;
+    padding-top: 4.5rem;
+    border: 1px solid #ccc;
+    background: var(--paper);
+  }
+
+  .metric-value {
+    font-size: clamp(3.5rem, 7vw, 6.25rem);
+    font-weight: 700;
+    letter-spacing: -.07em;
+    line-height: 1.05;
+  }
+
+  .metric-card--outline .metric-value {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+  }
+
+  .metric-value :global(small) {
+    font-size: .5em;
+    letter-spacing: -.04em;
+  }
+
+  .metric-value :global(.metric-prefix) {
+    vertical-align: top;
+    line-height: 1.35;
+  }
+
+  .metric-description {
+    margin-top: 1rem;
+    color: #595959;
+    line-height: 1.55;
+  }
+
+  .metric-card--dark .metric-description {
+    color: #b5b5b5;
+  }
+
+  .metric-source {
+    margin-top: auto;
+    padding-top: 3.5rem;
+    font-size: .875rem;
+    color: #656565;
+    line-height: 1.5;
+  }
+
+  .metric-source :global(a) {
+    text-decoration: none;
+  }
+
+  .metric-source :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    .metric-card {
+      min-height: 23rem;
+      border-radius: 2rem;
+    }
+
+    .metric-card--outline {
+      padding-top: 2.5rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .metric-card {
+      min-height: 17rem;
+      padding: 2rem;
+    }
+
+    .metric-card--outline {
+      min-height: 20rem;
+    }
+
+    .metric-source {
+      padding-top: 2rem;
+    }
+  }
+</style>

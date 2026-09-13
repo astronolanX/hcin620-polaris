@@ -1,0 +1,69 @@
+---
+interface Props {
+  name: string;
+  goals: string;
+  concerns: string;
+  involvement: string;
+}
+
+const { name, goals, concerns, involvement } = Astro.props;
+---
+
+<article class="stakeholder-card">
+  <h3>{name}</h3>
+  <dl>
+    <div><dt>Goals</dt><dd>{goals}</dd></div>
+    <div><dt>Concerns</dt><dd>{concerns}</dd></div>
+    <div><dt>How we involve them</dt><dd>{involvement}</dd></div>
+  </dl>
+</article>
+
+<style>
+  .stakeholder-card {
+    padding: clamp(2rem, 4.2vw, 3.75rem);
+    border-radius: 3rem;
+    background: var(--paper);
+  }
+
+  h3 {
+    min-height: 3.5rem;
+    margin: 0 0 3.5rem;
+    font-size: 1.625rem;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+  }
+
+  dl, dd {
+    margin: 0;
+  }
+
+  dl {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  dt {
+    margin-bottom: .5rem;
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  dd {
+    color: #595959;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 700px) {
+    .stakeholder-card {
+      border-radius: 2rem;
+    }
+
+    h3 {
+      min-height: 0;
+      margin-bottom: 2.5rem;
+    }
+  }
+</style>
