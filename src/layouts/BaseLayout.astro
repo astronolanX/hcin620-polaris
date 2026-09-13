@@ -1,14 +1,20 @@
 ---
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 
 interface Props {
   title: string;
   page: 'overview' | 'focus';
+  description?: string;
 }
 
-const { title, page } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const {
+  title,
+  page,
+  description = 'Team Polaris, Group 2 of HCIN 620. Exploring guidance for safe and responsible electronic waste disposal.',
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,21 +22,13 @@ const base = import.meta.env.BASE_URL;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
     <title>{title}</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="site-shell header-inner">
-        <a class="brand" href={base}>Team Polaris<span>HCIN-620</span></a>
-        <nav aria-label="Main navigation">
-          <a href={base} aria-current={page === 'overview' ? 'page' : undefined}>Overview</a>
-          <a href={`${base}project-focus/`} aria-current={page === 'focus' ? 'page' : undefined}>Project Focus</a>
-        </nav>
-      </div>
-    </header>
-    <div class="site-shell draft-note">Still coming together · Placeholder content for now</div>
+    <SiteHeader page={page} />
     <slot />
-    <footer class="site-shell site-footer"><span>Team Polaris</span><span>HCIN-620 · Milestone 1</span></footer>
+    <SiteFooter />
   </body>
 </html>
