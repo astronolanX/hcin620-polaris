@@ -40,9 +40,9 @@ Responsibility for project work is shared across Team Polaris. Work is coordinat
 ```text
 src/pages/        Website pages (file paths become routes)
 src/layouts/      Shared document metadata, header, and footer
-src/components/   Navigation, team list, content sections, and image placeholder
-src/data/         Shared project copy and team names/roles
-src/styles/       Design tokens, shared styles, and responsive layout
+src/components/   Shared layout, statistic cards, solution steps, and stakeholder cards
+src/data/         Overview copy, team details, stakeholders, and references
+src/styles/       Shared design tokens and page-specific responsive styles
 public/           Public assets copied into the built site
 docs/             Project documentation and handoff materials
 .agents/skills/    Reusable assistant skills loaded for relevant tasks
@@ -66,9 +66,9 @@ npm run preview
 
 The build writes the static site to `dist/`. Preview serves that build locally at the same base path.
 
-The overview implements the team's supplied index design: introductory text, team roles, an image area, project sections, and a shared dark footer. Project Focus uses the same components and content. Images and references remain placeholders; later course stages appear as locked navigation items.
+The overview implements the team's supplied index design. Project Focus implements its separate Figma layout: research statistics, a three-step solution diagram, user needs, stakeholder cards, and linked references. Both pages share navigation, typography, and the team footer. Images remain placeholders; later course stages appear as locked navigation items.
 
-Update team names and roles in `src/data/team.ts` and project copy in `src/data/project.ts`; both pages reuse this content. Shared colors, typography, spacing, and responsive rules live in `src/styles/global.css`. Replace `ImagePlaceholder.astro` with the selected image and its verified credit when those assets are ready. The template and content still need student and teammate review before submission.
+Update team details in `src/data/team.ts` and overview copy in `src/data/project.ts`. Project Focus copy lives in `src/pages/project-focus.astro`, with stakeholder content and citations in `src/data/stakeholders.ts` and `src/data/focus-references.ts`. Shared styles live in `src/styles/global.css`; Project Focus layout rules live in `src/styles/project-focus.css`, with reusable cards and diagram styles scoped to their components. Replace `ImagePlaceholder.astro` with the selected image and its verified credit when those assets are ready. The template and content still need student and teammate review before submission; see the [content review notes](docs/tools.md#content-review).
 
 Add pages under `src/pages/` and reuse `src/layouts/BaseLayout.astro`. Bootstrap CSS is bundled locally; add team-approved custom styles in `src/styles/global.css`. Import Bootstrap JavaScript only when a component needs it.
 

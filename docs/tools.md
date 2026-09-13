@@ -25,4 +25,8 @@ Students make creative, design, and technology decisions and review AI-assisted 
 
 ## AI Attribution
 
-Team Polaris supplies the website design and project content and shares responsibility for the implementation. OpenAI Codex implemented the supplied index design as a responsive Astro template, extracted shared components and content, and updated development documentation. Local checks passed for the static build, responsive layouts from 320 to 1440 pixels, page and section links, and keyboard access to the skip link. Images and references remain placeholders; student and teammate review are pending.
+Team Polaris supplies the website designs and project content and shares responsibility for the implementation. OpenAI Codex implemented the supplied index and Project Focus designs in Astro, built shared components and responsive layouts, transcribed supplied content and references, and updated development documentation. The index template passed local build, responsive layout, navigation, and keyboard checks. Project Focus build and desktop/mobile visual checks passed; image assets, student review, and teammate review remain pending.
+
+## Content Review
+
+Project Focus retains the team's supplied research claims. Source checks corrected the 82 Mt projection to **2030** and updated the NWRA reference URL and publication details. The supplied UNITAR article supports approximately one in six household electronics being unused or broken, but its retrieved text did not substantiate the additional claim that almost 30% of phones and game consoles sit unused. That sentence needs source confirmation before submission. CNET's original page blocked retrieval; its syndicated article was used to confirm the reported 31% figure.
