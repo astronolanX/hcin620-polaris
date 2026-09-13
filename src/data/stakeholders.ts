@@ -2,7 +2,7 @@ export const stakeholders = [
   {
     name: 'E-waste collection & recycling companies',
     goals: 'To receive the right electronic material to reduce contamination and improve proper recycling behaviour.',
-    concerns: 'People may bring items the facility does not accept, or rely on wrong hours or instructions.',
+    concerns: 'People may bring items a facility does not accept or rely on incorrect opening hours or disposal instructions.',
     involvement: 'Learn what type of items they accept, common user mistakes, and their disposal rules. Then ask them to review how their facility is shown on the platform.',
   },
   {
