@@ -11,7 +11,7 @@ Team Polaris group project for HCIN-620.
 
 ## Overview
 
-This repository will hold the team's project work and supporting documentation. Project scope is to be determined.
+Team Polaris is exploring guidance for safe and responsible electronic waste disposal. This repository contains the course project website and supporting documentation.
 
 ## Website Platform and Hosting
 
@@ -39,8 +39,10 @@ Responsibility for project work is shared across Team Polaris. Work is coordinat
 
 ```text
 src/pages/        Website pages (file paths become routes)
-src/layouts/      Shared HTML layout and stylesheet imports
-src/styles/       Custom CSS for team-approved designs
+src/layouts/      Shared document metadata, header, and footer
+src/components/   Navigation, team list, content sections, and image placeholder
+src/data/         Shared project copy and team names/roles
+src/styles/       Design tokens, shared styles, and responsive layout
 public/           Public assets copied into the built site
 docs/             Project documentation and handoff materials
 .agents/skills/    Reusable assistant skills loaded for relevant tasks
@@ -64,7 +66,9 @@ npm run preview
 
 The build writes the static site to `dist/`. Preview serves that build locally at the same base path.
 
-The overview and Project Focus pages use a temporary responsive layout and placeholder text while the team prepares Figma designs and final content. These placeholders are not submission-ready content.
+The overview implements the team's supplied index design: introductory text, team roles, an image area, project sections, and a shared dark footer. Project Focus uses the same components and content. Images and references remain placeholders; later course stages appear as locked navigation items.
+
+Update team names and roles in `src/data/team.ts` and project copy in `src/data/project.ts`; both pages reuse this content. Shared colors, typography, spacing, and responsive rules live in `src/styles/global.css`. Replace `ImagePlaceholder.astro` with the selected image and its verified credit when those assets are ready. The template and content still need student and teammate review before submission.
 
 Add pages under `src/pages/` and reuse `src/layouts/BaseLayout.astro`. Bootstrap CSS is bundled locally; add team-approved custom styles in `src/styles/global.css`. Import Bootstrap JavaScript only when a component needs it.
 
