@@ -268,65 +268,6 @@ a.site-nav-link:hover {
   color: #ececec;
 }
 
-/* Project Focus reuses the same content and visual foundations. */
-.page-intro {
-  padding-block: clamp(4rem, 8vw, 7rem);
-}
-
-.page-intro h1 {
-  margin-block: 1rem 1.75rem;
-}
-
-.eyebrow {
-  color: var(--muted);
-  font-size: .875rem;
-}
-
-.intro-copy {
-  max-width: 42rem;
-}
-
-.focus-grid {
-  display: grid;
-  grid-template-columns: minmax(12rem, .4fr) minmax(0, 1fr);
-  gap: clamp(3rem, 8vw, 7rem);
-  padding-bottom: var(--section-space);
-}
-
-.section-nav {
-  align-self: start;
-}
-
-.section-nav .eyebrow {
-  margin-bottom: 1rem;
-}
-
-.section-nav a {
-  display: block;
-  width: fit-content;
-  padding-block: .6rem;
-  text-decoration: none;
-}
-
-.section-nav a:hover {
-  text-decoration: underline;
-}
-
-.focus-content {
-  display: grid;
-  gap: clamp(3.5rem, 6vw, 5.5rem);
-}
-
-.focus-content .content-section {
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1.5rem;
-}
-
-.focus-content .content-section + .content-section {
-  padding-top: clamp(3.5rem, 6vw, 5.5rem);
-  border-top: 1px solid var(--line);
-}
-
 .skip-link {
   position: absolute;
   top: .75rem;
@@ -378,7 +319,7 @@ a.site-nav-link:hover {
     gap: 1.75rem 1.25rem;
   }
 
-  .content-section, .footer-inner, .focus-grid {
+  .content-section, .footer-inner {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -392,15 +333,6 @@ a.site-nav-link:hover {
 
   .footer-inner {
     gap: 3rem;
-  }
-
-  .focus-grid {
-    gap: 3.5rem;
-  }
-
-  .section-nav {
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--line);
   }
 
 }

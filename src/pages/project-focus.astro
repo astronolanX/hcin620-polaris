@@ -1,34 +1,122 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentSection from '../components/ContentSection.astro';
-import ProjectSections from '../components/ProjectSections.astro';
-import { projectSections } from '../data/project';
-
-const navigation = [
-  ...projectSections,
-  { id: 'references', title: 'References' },
-];
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+import MetricCard from '../components/MetricCard.astro';
+import ReferenceLink from '../components/ReferenceLink.astro';
+import SolutionSteps from '../components/SolutionSteps.astro';
+import StakeholderCard from '../components/StakeholderCard.astro';
+import { focusReferences } from '../data/focus-references';
+import { stakeholders } from '../data/stakeholders';
+import '../styles/project-focus.css';
 ---
 
 <BaseLayout title="Project Focus | Team Polaris" page="focus">
-  <main id="main" class="site-shell" tabindex="-1">
-    <header class="page-intro focus-intro">
-      <p class="eyebrow">Milestone 1 / A closer look</p>
-      <h1>Project Focus</h1>
-      <p class="intro-copy">A little more about the problem, the people, and the idea.</p>
-    </header>
-    <div class="focus-grid">
-      <nav class="section-nav" aria-label="On this page">
-        <p class="eyebrow">On this page</p>
-        {navigation.map(section => <a href={`#${section.id}`}>{section.title}</a>)}
-      </nav>
-      <div class="focus-content">
-        <ProjectSections />
-        <ContentSection id="references" title="References">
-          <p class="eyebrow">Coming soon</p>
-          <p>The sources we use will go here, with links back to them from the text above.</p>
-        </ContentSection>
+  <main id="main" class="project-focus" tabindex="-1">
+    <section class="site-shell focus-hero" aria-labelledby="focus-title">
+      <h1 id="focus-title">One place to find out what to<br class="focus-desktop-break" /> do with old electronics.</h1>
+      <p class="focus-hero-copy">E-waste is increasingly becoming a problem as new technology hits the market and old technology becomes defunct.</p>
+      <ImagePlaceholder label="Electronics collection photo" plain />
+    </section>
+
+    <section class="site-shell focus-problem" aria-labelledby="problem-title">
+      <div class="focus-problem-summary">
+        <h2 id="problem-title" class="focus-label">The problem</h2>
+        <p class="focus-problem-lead">Only about</p>
+        <p class="focus-headline-stat">22%</p>
+        <p class="focus-problem-detail">of the world’s e-waste was properly recycled in 2022 <ReferenceLink id={3} /></p>
       </div>
+      <ul class="focus-metrics" role="list" aria-label="The scale of electronic waste">
+        <MetricCard label="62 million tonnes" tone="dark">
+          <Fragment slot="value">62<small> Mt</small></Fragment>
+          <p>of e-waste generated in 2022, growing five times faster than documented recycling. On track for 82 Mt by 2030.<ReferenceLink id={3} /></p>
+        </MetricCard>
+        <MetricCard label="62 billion dollars">
+          <Fragment slot="value"><small class="metric-prefix">$</small>62<small> B</small></Fragment>
+          <p>of recoverable materials (copper, gold, palladium) are left unaccounted for.<ReferenceLink id={3} /></p>
+        </MetricCard>
+        <MetricCard label="More than 5,000 fires annually">
+          <Fragment slot="value">5000<small> +</small></Fragment>
+          <p>fires are estimated to happen annually at U.S. recycling facilities and may be caused by lithium-ion batteries placed in curbside bins.<ReferenceLink id={5} /></p>
+        </MetricCard>
+      </ul>
+    </section>
+
+    <div class="site-shell focus-barrier">
+      <ContentSection id="barrier" title="The barrier isn’t willingness. It’s knowing what to do.">
+        <Fragment slot="heading">The barrier isn’t <em>willingness.</em><br />It’s <em>knowing</em> what to do.</Fragment>
+        <p>E-waste disposal rules are different depending on where you live and what item you have. Hence, people may not know if a battery can go in curbside recycling or which nearby waste facilities accept certain electronics.</p>
+        <p>Since this information is spread across local recycling centers, manufacturers, and other programs, people often have to search several places to figure out what to do. That extra effort can sometimes hinder them from getting rid of old electronics.</p>
+      </ContentSection>
+      <ul class="focus-metrics focus-surveys" role="list" aria-label="Research on unused electronics">
+        <MetricCard label="39 percent" tone="outline">
+          <Fragment slot="value">39<small>%</small></Fragment>
+          <p>of U.S. consumers kept their old devices instead of recycling, selling, or getting rid of them.</p>
+          <a slot="source" href="#reference-4">Survey of 4,000 consumers, Fortune, 2026</a>
+        </MetricCard>
+        <MetricCard label="31 percent" tone="outline">
+          <Fragment slot="value">31<small>%</small></Fragment>
+          <p>of U.S. adults keep their old phones, laptops, and game consoles because they do not know what to do with them.</p>
+          <a slot="source" href="#reference-1">CNET survey, 2025</a>
+        </MetricCard>
+        <MetricCard label="1 in 6" tone="outline">
+          <Fragment slot="value">1 <small>in</small> 6</Fragment>
+          <p>electronics in European homes are no longer being used. Almost 30% of phones and game consoles are just sitting unused.</p>
+          <a slot="source" href="#reference-2">WEEE Forum / UNITAR household survey</a>
+        </MetricCard>
+      </ul>
     </div>
+
+    <section class="focus-solution" aria-labelledby="solution-title">
+      <div class="site-shell">
+        <p class="focus-label">The solution</p>
+        <h2 id="solution-title">One application. Any location,<br class="focus-desktop-break" /> not limited to state lines.</h2>
+        <p class="focus-solution-intro">Instead of trying to change the entire waste system, our team focuses on helping people understand <em>how</em> and <em>where</em> to safely discard e-waste.</p>
+        <SolutionSteps />
+        <p class="focus-solution-goal">Our goal is to lower the cognitive friction of disposal: provide clear rules and regulations, show people where to take each item, and help them dispose of electronics responsibly.</p>
+      </div>
+    </section>
+
+    <section class="site-shell focus-users" aria-labelledby="users-title">
+      <div class="focus-user-description">
+        <p class="focus-label">Who we design for</p>
+        <h2 id="users-title">Individual consumers with a drawer of unwanted electronics.</h2>
+        <p class="focus-user-devices">Batteries, old phones, cables, TVs, computers, and many more.</p>
+        <div class="focus-user-goal">
+          <h3 class="focus-label">Primary goal</h3>
+          <p>Find the right place to discard without searching through lots of different sources.</p>
+        </div>
+      </div>
+      <aside class="focus-concerns" aria-labelledby="concerns-title">
+        <h3 id="concerns-title" class="focus-label">They worry about</h3>
+        <ul role="list">
+          <li>Information accuracy</li>
+          <li>Travel distance</li>
+          <li>Disposal fees</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="focus-stakeholders" aria-labelledby="stakeholders-title">
+      <div class="site-shell">
+        <h2 id="stakeholders-title" class="focus-label">Stakeholders we involve along the way</h2>
+        <div class="focus-stakeholder-grid">
+          {stakeholders.map(stakeholder => <StakeholderCard {...stakeholder} />)}
+        </div>
+      </div>
+    </section>
+
+    <section class="site-shell focus-references" aria-labelledby="references-title">
+      <h2 id="references-title" class="focus-label">References</h2>
+      <ol role="list">
+        {focusReferences.map(reference => (
+          <li id={`reference-${reference.id}`} tabindex="-1">
+            <span class="focus-reference-number">[{reference.id}]</span>
+            {' '}{reference.citation}{' '}
+            <a href={reference.url}>{reference.url}</a>
+          </li>
+        ))}
+      </ol>
+    </section>
   </main>
 </BaseLayout>

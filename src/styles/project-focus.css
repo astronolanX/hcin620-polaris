@@ -1,0 +1,274 @@
+.project-focus {
+  --focus-space: clamp(6rem, 21vw, 19rem);
+  --focus-long-space: clamp(7rem, 28vw, 25rem);
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+}
+
+.project-focus em {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.focus-label {
+  color: #595959;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.focus-hero {
+  padding-top: clamp(5rem, 11.1vw, 10rem);
+}
+
+.focus-hero h1 {
+  max-width: 48rem;
+  text-wrap: initial;
+}
+
+.focus-hero-copy {
+  max-width: 37rem;
+  margin-top: 1.5rem;
+  color: #595959;
+}
+
+.focus-hero .feature-image {
+  margin-top: clamp(3rem, 5.56vw, 5rem);
+}
+
+.focus-problem {
+  padding-top: var(--focus-space);
+}
+
+.focus-problem-summary {
+  text-align: center;
+}
+
+.focus-problem-lead {
+  margin-top: 1.5rem;
+  color: #595959;
+  font-size: clamp(1.5rem, 2.23vw, 2rem);
+}
+
+.focus-headline-stat {
+  font-size: clamp(6rem, 10vw, 9rem);
+  font-weight: 700;
+  letter-spacing: -.06em;
+  line-height: 1;
+}
+
+.focus-problem-detail {
+  margin-top: .5rem;
+  color: #595959;
+  font-size: clamp(1.125rem, 1.95vw, 1.75rem);
+  line-height: 1.5;
+}
+
+.focus-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.78vw, 2.5rem);
+  padding: 0;
+  margin: var(--focus-long-space) 0 0;
+  list-style: none;
+}
+
+.focus-barrier {
+  padding-block: var(--focus-long-space);
+}
+
+.focus-barrier .content-section-heading {
+  line-height: 1.45;
+  text-wrap: initial;
+}
+
+.focus-surveys {
+  margin-top: 4rem;
+}
+
+.focus-solution {
+  padding-block: clamp(6rem, 14.5vw, 13rem);
+  background: var(--footer);
+  color: #fff;
+}
+
+.focus-solution .focus-label {
+  color: #b3b3b3;
+}
+
+.focus-solution h2,
+.focus-user-description h2 {
+  margin-top: 1.5rem;
+  font-size: var(--title-size);
+  line-height: 1.1;
+  text-wrap: initial;
+}
+
+.focus-solution h2 {
+  max-width: 52rem;
+}
+
+.focus-solution-intro {
+  max-width: 43rem;
+  margin-top: 1.5rem;
+  color: #b3b3b3;
+}
+
+.focus-solution em {
+  color: var(--accent-on-dark);
+  font-weight: 700;
+}
+
+.focus-solution .solution-steps {
+  margin-top: clamp(4rem, 7.8vw, 7rem);
+}
+
+.focus-solution-goal {
+  max-width: 56rem;
+  margin-top: clamp(4rem, 7.8vw, 7rem);
+  font-size: clamp(1.25rem, 1.81vw, 1.625rem);
+  line-height: 1.45;
+}
+
+.focus-users {
+  display: grid;
+  grid-template-columns: minmax(0, 1.27fr) minmax(0, 1fr);
+  gap: clamp(3rem, 7.2vw, 6.5rem);
+  align-items: start;
+  padding-block: var(--focus-space);
+}
+
+.focus-user-devices {
+  margin-top: 1.5rem;
+  color: #595959;
+}
+
+.focus-user-goal {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #ccc;
+}
+
+.focus-user-goal p {
+  margin-top: 1.5rem;
+  font-size: clamp(1.25rem, 1.81vw, 1.625rem);
+  line-height: 1.45;
+}
+
+.focus-concerns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 28rem;
+  padding: clamp(2rem, 3.34vw, 3rem);
+  border-radius: 3rem;
+  background: var(--surface);
+}
+
+.focus-concerns ul {
+  padding: 0;
+  margin: 6rem 0 0;
+  list-style: none;
+}
+
+.focus-concerns li {
+  padding-block: 1.25rem;
+  border-bottom: 1px solid #ccc;
+  font-size: clamp(1.25rem, 1.81vw, 1.625rem);
+}
+
+.focus-stakeholders {
+  padding-block: clamp(6rem, 14.5vw, 13rem);
+  background: #f2f2f2;
+}
+
+.focus-stakeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(3rem, 8.34vw, 7.5rem);
+  margin-top: 1.5rem;
+}
+
+.focus-references {
+  padding-block: clamp(5rem, 9vw, 8rem);
+  color: #595959;
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
+.focus-references ol {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  list-style: none;
+}
+
+.focus-references li {
+  scroll-margin-top: 2rem;
+  overflow-wrap: anywhere;
+}
+
+.focus-references li:target {
+  outline: 2px solid var(--accent);
+  outline-offset: .5rem;
+  border-radius: .25rem;
+}
+
+.focus-reference-number {
+  vertical-align: super;
+  font-size: .7em;
+}
+
+.focus-references a {
+  text-decoration-color: #b8b8b8;
+}
+
+@media (max-width: 900px) {
+  .focus-desktop-break {
+    display: none;
+  }
+
+  .focus-users {
+    gap: 3rem;
+  }
+
+  .focus-concerns {
+    min-height: 25rem;
+    border-radius: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .focus-hero {
+    padding-top: 3.5rem;
+  }
+
+  .focus-metrics,
+  .focus-users,
+  .focus-stakeholder-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .focus-metrics {
+    gap: 1.5rem;
+  }
+
+  .focus-surveys {
+    margin-top: 3rem;
+  }
+
+  .focus-users,
+  .focus-stakeholder-grid {
+    gap: 2rem;
+  }
+
+  .focus-concerns {
+    min-height: 0;
+  }
+
+  .focus-concerns ul {
+    margin-top: 3rem;
+  }
+}
