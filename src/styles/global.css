@@ -146,11 +146,7 @@ a.site-nav-link:hover {
 }
 
 .overview-intro {
-  padding-block: clamp(5rem, 11.1vw, 10rem) clamp(5rem, 15.3vw, 13.75rem);
-}
-
-.overview-intro > .team {
-  margin-top: clamp(2.5rem, 4.4vw, 4rem);
+  padding-block: clamp(2rem, 2.5vw, 2.25rem) clamp(2rem, 3.34vw, 3rem);
 }
 
 .team-label {
@@ -213,7 +209,9 @@ a.site-nav-link:hover {
 .overview-sections {
   display: grid;
   gap: var(--section-space);
-  padding-block: var(--section-space);
+  padding-block: var(--section-space) clamp(6rem, 23.34vw, 21rem);
+  font-size: clamp(1rem, 1.22vw, 1.125rem);
+  line-height: 1.5;
 }
 
 .content-section {

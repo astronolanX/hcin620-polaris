@@ -66,7 +66,7 @@ npm run preview
 
 The build writes the static site to `dist/`. Preview serves that build locally at the same base path.
 
-The overview implements the team's supplied index design. Project Focus implements its separate Figma layout: research statistics, a three-step solution diagram, user needs, stakeholder cards, and linked references. Both pages share navigation, typography, and the team footer. Images remain placeholders; later course stages appear as locked navigation items.
+The overview opens with a team introduction and full-width image area, followed by the project sections. Project Focus implements its separate Figma layout: research statistics, a three-step solution diagram, user needs, stakeholder cards, and linked references. Both pages share navigation, typography, and the team roster in the footer. Images remain placeholders; later course stages appear as locked navigation items.
 
 Update team details in `src/data/team.ts` and overview copy in `src/data/project.ts`. Project Focus copy lives in `src/pages/project-focus.astro`, with stakeholder content and citations in `src/data/stakeholders.ts` and `src/data/focus-references.ts`. Shared styles live in `src/styles/global.css`; Project Focus layout rules live in `src/styles/project-focus.css`, with reusable cards and diagram styles scoped to their components. Replace `ImagePlaceholder.astro` with the selected image and its verified credit when those assets are ready. The template and content still need student and teammate review before submission; see the [content review notes](docs/tools.md#content-review).
 

@@ -9,7 +9,7 @@ const { stacked = false } = Astro.props;
 ---
 
 <div class:list={['team', { 'team--stacked': stacked }]}>
-  <p class="team-label">Our team members include</p>
+  <p class="team-label">Our team members:</p>
   <ul class="team-list">
     {team.map(member => (
       <li>
