@@ -37,6 +37,12 @@
   margin-top: clamp(3rem, 5.56vw, 5rem);
 }
 
+.focus-hero .image-placeholder {
+  aspect-ratio: 64 / 35;
+  border-radius: clamp(1rem, 2.2vw, 2rem);
+  background: #ebe9e2;
+}
+
 .focus-problem {
   padding-top: var(--focus-space);
 }

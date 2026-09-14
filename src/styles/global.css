@@ -187,21 +187,16 @@ a.site-nav-link:hover {
   margin: 0;
 }
 
-.image-frame {
-  padding: clamp(1rem, 2.78vw, 2.5rem);
-  border-radius: clamp(1.5rem, 2.2vw, 2rem);
-  background: var(--surface);
-}
-
 .image-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: .75rem;
-  aspect-ratio: 30 / 13;
+  width: 100%;
+  aspect-ratio: 640 / 283;
   min-height: 12rem;
-  border-radius: clamp(1rem, 2.2vw, 2rem);
+  border-radius: clamp(1rem, 2.78vw, 2.5rem);
   background: var(--image-surface);
   color: #78646c;
   text-align: center;
